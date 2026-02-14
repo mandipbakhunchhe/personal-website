@@ -4,9 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Art Factory | Film & Media Production</title>
+<title>The Art Factory Productions</title>
 
 <style>
+
+/* ---------- BRAND COLORS ---------- */
+
+:root {
+  --orange: #f47c00;
+  --black: #000;
+  --white: #fff;
+}
 
 /* ---------- GLOBAL ---------- */
 
@@ -17,8 +25,8 @@ html {
 body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  background: #f4f4f4;
-  color: #222;
+  background: var(--orange);
+  color: var(--black);
   line-height: 1.7;
 }
 
@@ -31,9 +39,8 @@ body {
 /* ---------- HEADER ---------- */
 
 header {
-  background: #000;
-  color: #fff;
-  padding: 20px 0;
+  background: var(--black);
+  padding: 18px 0;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -45,18 +52,17 @@ header {
   align-items: center;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
+.logo img {
+  height: 55px;
 }
 
 nav a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 22px;
   font-size: 14px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 nav a:hover {
@@ -66,22 +72,25 @@ nav a:hover {
 /* ---------- HERO ---------- */
 
 .hero {
-  background: #111;
-  color: #fff;
+  background: var(--orange);
   text-align: center;
-  padding: 120px 20px;
+  padding: 100px 20px 80px;
+}
+
+.hero-logo {
+  max-width: 420px;
+  width: 90%;
+  margin-bottom: 30px;
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+  font-size: 42px;
+  margin: 0;
 }
 
 .hero p {
   max-width: 650px;
-  margin: auto;
-  opacity: 0.85;
+  margin: 20px auto 0;
   font-size: 18px;
 }
 
@@ -89,6 +98,11 @@ nav a:hover {
 
 section {
   padding: 80px 0;
+  background: #fff;
+}
+
+section.alt {
+  background: #f2f2f2;
 }
 
 h2 {
@@ -98,7 +112,6 @@ h2 {
 
 p {
   font-size: 17px;
-  margin-bottom: 18px;
 }
 
 /* ---------- SERVICES ---------- */
@@ -111,8 +124,8 @@ p {
 
 .service-box {
   background: #fff;
+  border: 2px solid var(--black);
   padding: 30px;
-  border: 1px solid #ddd;
 }
 
 .service-box h3 {
@@ -133,24 +146,18 @@ p {
   border: none;
 }
 
-/* ---------- STORY ---------- */
-
-.story {
-  background: #fff;
-}
-
 /* ---------- CONTACT ---------- */
 
 .contact a {
-  color: #000;
+  color: var(--black);
   font-weight: bold;
 }
 
 /* ---------- FOOTER ---------- */
 
 footer {
-  background: #000;
-  color: #fff;
+  background: var(--black);
+  color: var(--white);
   text-align: center;
   padding: 35px 20px;
   font-size: 14px;
@@ -169,7 +176,7 @@ footer {
 }
 
 .hero h1 {
-  font-size: 34px;
+  font-size: 30px;
 }
 
 }
@@ -183,15 +190,19 @@ footer {
 
 <header>
   <div class="container header-inner">
-    <div class="logo">THE ART FACTORY</div>
+
+    <div class="logo">
+      <img src="logo.png" alt="The Art Factory Productions">
+    </div>
 
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
-      <a href="#story">Journey</a>
+      <a href="#journey">Journey</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </div>
 </header>
 
@@ -199,12 +210,16 @@ footer {
 <!-- HERO -->
 
 <section class="hero">
-  <h1>Creating Stories That Matter</h1>
+
+  <img src="logo.png" class="hero-logo" alt="The Art Factory Productions Logo">
+
+  <h1>Independent Film & Media Production</h1>
+
   <p>
-    The Art Factory is an independent film and media production company
-    focused on storytelling, satire, digital entertainment and visual
-    storytelling across film, web and branded media.
+    Creating stories through satire, cinema and digital storytelling.
+    Built from passion, experimentation and independent creativity.
   </p>
+
 </section>
 
 
@@ -215,17 +230,15 @@ footer {
     <h2>About The Art Factory</h2>
 
     <p>
-      Founded from the early digital content movement in 2015,
-      The Art Factory evolved from viral online sketches into a
-      full creative production collective producing short films,
-      parody content, web series, music videos and branded media.
+      The Art Factory Productions began as a digital content movement in 2015,
+      evolving from viral online sketches into a full creative production
+      collective producing films, web series, parody content and branded media.
     </p>
 
     <p>
       Built independently by creators experimenting with storytelling,
-      the company has generated millions of organic views across
-      social media platforms while continuously exploring new formats
-      of cinematic and digital expression.
+      the studio has generated millions of organic views while continuing
+      to explore new forms of cinematic expression.
     </p>
   </div>
 </section>
@@ -233,7 +246,7 @@ footer {
 
 <!-- SERVICES -->
 
-<section id="services" class="story">
+<section id="services" class="alt">
   <div class="container">
     <h2>What We Do</h2>
 
@@ -241,26 +254,17 @@ footer {
 
       <div class="service-box">
         <h3>Film Production</h3>
-        <p>
-          Short films, sketches, satire and independent cinematic
-          storytelling from concept to final production.
-        </p>
+        <p>Short films, satire and independent cinematic storytelling from concept to screen.</p>
       </div>
 
       <div class="service-box">
         <h3>Digital Content</h3>
-        <p>
-          Online series, social media content and entertainment
-          formats designed for modern digital audiences.
-        </p>
+        <p>Online entertainment, web series and social media storytelling formats.</p>
       </div>
 
       <div class="service-box">
-        <h3>Commercial & Brand Work</h3>
-        <p>
-          Music videos, advertisements and branded storytelling
-          collaborations with artists and companies.
-        </p>
+        <h3>Commercial Projects</h3>
+        <p>Music videos, advertisements and branded visual storytelling collaborations.</p>
       </div>
 
     </div>
@@ -297,25 +301,22 @@ footer {
 </section>
 
 
-<!-- STORY / JOURNEY -->
+<!-- JOURNEY -->
 
-<section id="story" class="story">
+<section id="journey" class="alt">
   <div class="container">
     <h2>Our Journey</h2>
 
     <p>
-      Beginning as short-form comedy videos in Nepal, the collective
-      grew rapidly through viral content and collaborative filmmaking.
-      Over time, the team expanded into web series, satire films and
-      commercial productions while navigating the challenges of
-      independent filmmaking.
+      From short-form comedy videos in Nepal to large-scale collaborative
+      productions, The Art Factory has grown through experimentation,
+      resilience and passion for storytelling.
     </p>
 
     <p>
-      Despite financial setbacks, platform changes and industry
-      limitations, The Art Factory continues to exist as a creative
-      identity driven by one belief:
-      <strong>art comes first.</strong>
+      Despite industry challenges and independent production limitations,
+      one philosophy has remained constant:
+      <strong>Art comes first.</strong>
     </p>
 
   </div>
@@ -338,12 +339,13 @@ footer {
         mandipbakhunchhe@gmail.com
       </a>
     </p>
+
   </div>
 </section>
 
 
 <footer>
-  © 2026 The Art Factory | Independent Film & Media Production
+  © 2026 The Art Factory Productions
 </footer>
 
 </body>
