@@ -4,181 +4,122 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Art Factory Productions</title>
+<title>The Art Factory | Timeline</title>
 
 <style>
 
-/* ---------- BRAND COLORS ---------- */
-
-:root {
-  --orange: #f47c00;
-  --black: #000;
-  --white: #fff;
-}
-
 /* ---------- GLOBAL ---------- */
-
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  background: var(--orange);
-  color: var(--black);
+  background: #000;
+  color: #fff;
   line-height: 1.7;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 900px;
   margin: auto;
   padding: 0 20px;
-}
-
-/* ---------- HEADER ---------- */
-
-header {
-  background: var(--black);
-  padding: 18px 0;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo img {
-  height: 55px;
-}
-
-nav a {
-  color: var(--white);
-  text-decoration: none;
-  margin-left: 22px;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-nav a:hover {
-  opacity: 0.7;
 }
 
 /* ---------- HERO ---------- */
 
 .hero {
-  background: var(--orange);
   text-align: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
+  border-bottom: 1px solid #222;
 }
 
-.hero-logo {
-  max-width: 420px;
-  width: 90%;
-  margin-bottom: 30px;
+.hero img {
+  max-width: 300px;
+  width: 80%;
 }
 
 .hero h1 {
-  font-size: 42px;
-  margin: 0;
+  margin-top: 20px;
+  font-size: 32px;
+  letter-spacing: 1px;
 }
 
 .hero p {
-  max-width: 650px;
-  margin: 20px auto 0;
-  font-size: 18px;
+  opacity: 0.7;
 }
 
-/* ---------- SECTIONS ---------- */
+/* ---------- TIMELINE ---------- */
 
-section {
-  padding: 80px 0;
-  background: #fff;
+.timeline {
+  padding: 60px 0;
 }
 
-section.alt {
-  background: #f2f2f2;
+/* accordion button */
+
+.accordion {
+  background: #111;
+  color: white;
+  cursor: pointer;
+  padding: 22px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #222;
+  transition: 0.3s;
 }
 
-h2 {
-  font-size: 32px;
-  margin-bottom: 25px;
+.accordion:hover {
+  background: #1a1a1a;
 }
 
-p {
-  font-size: 17px;
+/* panel */
+
+.panel {
+  background: #0b0b0b;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 22px;
 }
 
-/* ---------- SERVICES ---------- */
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+.panel-content {
+  padding: 25px 0;
+  color: #ccc;
 }
 
-.service-box {
-  background: #fff;
-  border: 2px solid var(--black);
-  padding: 30px;
+.panel p {
+  margin-bottom: 16px;
 }
 
-.service-box h3 {
-  margin-top: 0;
-}
+/* videos */
 
-/* ---------- WORK ---------- */
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+.video {
+  margin: 25px 0;
 }
 
 .video iframe {
   width: 100%;
-  height: 280px;
+  height: 420px;
   border: none;
 }
 
-/* ---------- CONTACT ---------- */
-
-.contact a {
-  color: var(--black);
-  font-weight: bold;
-}
-
-/* ---------- FOOTER ---------- */
+/* footer */
 
 footer {
-  background: var(--black);
-  color: var(--white);
   text-align: center;
-  padding: 35px 20px;
+  padding: 40px 20px;
+  border-top: 1px solid #222;
   font-size: 14px;
+  opacity: 0.7;
 }
 
-/* ---------- MOBILE ---------- */
+/* mobile */
 
-@media(max-width: 900px){
-
-.services {
-  grid-template-columns: 1fr;
-}
-
-.work-grid {
-  grid-template-columns: 1fr;
-}
-
-.hero h1 {
-  font-size: 30px;
-}
-
+@media(max-width:768px){
+  .video iframe {
+    height: 220px;
+  }
 }
 
 </style>
@@ -186,167 +127,228 @@ footer {
 
 <body>
 
-<!-- HEADER -->
-
-<header>
-  <div class="container header-inner">
-
-    <div class="logo">
-      <img src="Art Factory Productions.jpg" alt="The Art Factory Productions">
-    </div>
-
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#journey">Journey</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
-
 <!-- HERO -->
 
 <section class="hero">
-
-  <img src="Art Factory Productions.jpg" class="hero-logo" alt="The Art Factory Productions Logo">
-
-  <h1>Independent Film & Media Production</h1>
-
-  <p>
-    Creating stories through satire, cinema and digital storytelling.
-    Built from passion, experimentation and independent creativity.
-  </p>
-
+  <img src="logo.png" alt="The Art Factory Productions">
+  <h1>The Art Factory Timeline</h1>
+  <p>The journey from short vines to independent filmmaking.</p>
 </section>
 
 
-<!-- ABOUT -->
+<section class="timeline container">
 
-<section id="about">
-  <div class="container">
-    <h2>About The Art Factory</h2>
+<!-- 2015 -->
 
-    <p>
-      The Art Factory Productions began as a digital content movement in 2015,
-      evolving from viral online sketches into a full creative production
-      collective producing films, web series, parody content and branded media.
-    </p>
+<button class="accordion">2015 — The Beginning</button>
+<div class="panel">
+<div class="panel-content">
 
-    <p>
-      Built independently by creators experimenting with storytelling,
-      the studio has generated millions of organic views while continuing
-      to explore new forms of cinematic expression.
-    </p>
-  </div>
-</section>
+<p>
+On 20 November 2015, Mandip created a short vine titled
+<strong>“Chihaan ki Pari”</strong> and uploaded it to Instagram.
+This marked the unofficial beginning of what would later become
+The Art Factory.
+</p>
 
+<div class="video">
+<iframe src="https://www.instagram.com/p/-TzVwlmIos/embed"></iframe>
+</div>
 
-<!-- SERVICES -->
+<p>
+Friends soon joined as recurring characters, forming the early
+identity known as <strong>Super Mandip Vines</strong>.
+</p>
 
-<section id="services" class="alt">
-  <div class="container">
-    <h2>What We Do</h2>
-
-    <div class="services">
-
-      <div class="service-box">
-        <h3>Film Production</h3>
-        <p>Short films, satire and independent cinematic storytelling from concept to screen.</p>
-      </div>
-
-      <div class="service-box">
-        <h3>Digital Content</h3>
-        <p>Online entertainment, web series and social media storytelling formats.</p>
-      </div>
-
-      <div class="service-box">
-        <h3>Commercial Projects</h3>
-        <p>Music videos, advertisements and branded visual storytelling collaborations.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
+</div>
+</div>
 
 
-<!-- WORK -->
+<!-- 2016 -->
 
-<section id="work">
-  <div class="container">
-    <h2>Selected Work</h2>
+<button class="accordion">2016 — Viral Growth & Recognition</button>
+<div class="panel">
+<div class="panel-content">
 
-    <div class="work-grid">
+<p>
+Instagram vines were compiled and uploaded to YouTube as
+“Nepali Vine Compilation,” marking the transition into long-form
+digital content.
+</p>
 
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/1p9rwJyg358" allowfullscreen></iframe>
-      </div>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/DCVlH6XyEMU"></iframe>
+</div>
 
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/toHzwlWpvKw" allowfullscreen></iframe>
-      </div>
+<p>
+The core group consisted of Mandip Bakhunchhe,
+Somit Majhi and Sujan Kshetri. Meme pages and online communities
+began reposting the content, helping videos reach viral audiences.
+</p>
 
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/21HOecUFHWk" allowfullscreen></iframe>
-      </div>
+<p>
+Later that year, the parody
+<strong>“Man Vs Wild Nepali Parody”</strong> became one of the
+channel’s most beloved releases.
+</p>
 
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/DCVlH6XyEMU" allowfullscreen></iframe>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- JOURNEY -->
-
-<section id="journey" class="alt">
-  <div class="container">
-    <h2>Our Journey</h2>
-
-    <p>
-      From short-form comedy videos in Nepal to large-scale collaborative
-      productions, The Art Factory has grown through experimentation,
-      resilience and passion for storytelling.
-    </p>
-
-    <p>
-      Despite industry challenges and independent production limitations,
-      one philosophy has remained constant:
-      <strong>Art comes first.</strong>
-    </p>
-
-  </div>
-</section>
+</div>
+</div>
 
 
-<!-- CONTACT -->
+<!-- 2017 -->
 
-<section id="contact">
-  <div class="container contact">
-    <h2>Contact</h2>
+<button class="accordion">2017 — Television & Expansion</button>
+<div class="panel">
+<div class="panel-content">
 
-    <p>
-      For collaborations, production inquiries or partnerships:
-    </p>
+<p>
+The team was invited to Himalaya TV’s Evening Show at Six,
+becoming one of the early digital creator groups in Nepal
+to appear on national television.
+</p>
 
-    <p>
-      Email:
-      <a href="mailto:mandipbakhunchhe@gmail.com">
-        mandipbakhunchhe@gmail.com
-      </a>
-    </p>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/S6oEPbwFuDs"></iframe>
+</div>
 
-  </div>
+<p>
+Super Mandip merged creatively with Fun Revolution TV,
+expanding ambitions toward web series and cinematic storytelling.
+</p>
+
+<p>
+The web series <strong>Hostel Diaries</strong> launched but ended
+after three episodes due to lack of funding and sponsorship,
+at a time when content creation had little industry support.
+</p>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/cAj4M4COuZs"></iframe>
+</div>
+
+</div>
+</div>
+
+
+<!-- 2018 -->
+
+<button class="accordion">2018 — Transition & SMTV Productions</button>
+<div class="panel">
+<div class="panel-content">
+
+<p>
+Managing two production companies became financially difficult,
+leading to an amicable split. Mandip focused fully on
+SMTV Productions.
+</p>
+
+<p>Notable works included experimental short films:</p>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/21HOecUFHWk"></iframe>
+</div>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/QH3KxZRPn8M"></iframe>
+</div>
+
+<p>
+Algorithm changes and monetization challenges reduced reach,
+creating major obstacles for independent creators.
+</p>
+
+</div>
+</div>
+
+
+<!-- 2019 -->
+
+<button class="accordion">2019 — Birth of The Art Factory</button>
+<div class="panel">
+<div class="panel-content">
+
+<p>
+In July 2019, the company rebranded as
+<strong>The Art Factory</strong>.
+A new channel launched with the same goal:
+to create art independently.
+</p>
+
+<p>
+The parody of VTEN’s “Yestai Ta Hobi Bro” became a breakout hit,
+reaching over 1.4 million YouTube views and more than
+10 million across platforms.
+</p>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/1p9rwJyg358"></iframe>
+</div>
+
+</div>
+</div>
+
+
+<!-- 2020+ -->
+
+<button class="accordion">2020 — Chhalaang Era & Beyond</button>
+<div class="panel">
+<div class="panel-content">
+
+<p>
+The Art Factory collaborated with Chhalaang Media,
+producing music videos, advertisements and digital content.
+</p>
+
+<p>
+The sitcom <strong>Roommates</strong> was filmed extensively
+but cancelled after sponsor and investment issues forced
+production shutdown.
+</p>
+
+<p>
+Despite setbacks, members continued creating independently,
+carrying forward the identity and philosophy of the studio.
+</p>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/toHzwlWpvKw"></iframe>
+</div>
+
+</div>
+</div>
+
 </section>
 
 
 <footer>
-  © 2026 The Art Factory Productions
+© 2026 The Art Factory Productions
 </footer>
+
+
+<script>
+
+/* accordion script */
+
+const acc = document.querySelectorAll(".accordion");
+
+acc.forEach(button => {
+  button.addEventListener("click", function () {
+
+    this.classList.toggle("active");
+
+    const panel = this.nextElementSibling;
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+
+  });
+});
+
+</script>
 
 </body>
 </html>
